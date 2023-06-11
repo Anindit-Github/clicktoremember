@@ -1,13 +1,62 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.setup-default{
+    @apply w-36 lg:w-72 h-10 lg:h-14 font-bold text-base lg:text-3xl text-white text-center p-2 rounded-full mx-auto 
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.caption-default{
+    @apply mt-5 lg:mt-8 ml-1 lg:ml-8 font-bold text-gray-500 text-base lg:text-xl
+}
+
+.title-default {
+    @apply lg:text-3xl text-2xl lg:pt-12 text-white font-bold  flex items-center justify-center
+}
+
+.grid-4x4-default {
+    @apply w-[72px] h-[72px] lg:w-28 lg:h-28 p-4 font-bold text-3xl lg:p-7 lg:text-5xl text-white text-center rounded-full bg-[#22313F] 
+}
+
+.grid-6x6-default {
+    @apply w-12 h-12 lg:w-20 lg:h-20 p-2 font-bold text-xl lg:p-4 lg:text-4xl rounded-full text-center text-white bg-[#22313F]
+}
+
+.grid-container-default {
+    @apply mx-auto w-[350px] lg:w-[580px] h-[350px] lg:h-[560px] grid mt-12 justify-items-center gap-y-4
+}
+
+.triangle {
+    position: relative;
+}
+
+.triangle:after {
+    content:'';
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 0;
+    height: 0;
+    border-top: solid 20px #f0b40c;
+    border-left: solid 20px transparent;
+    border-right: solid 20px transparent;
+    transform: scaleY(-1);
+}
+
+
+.digits{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color:  black;
+}
+
+.digits-white{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color:  white;
+}
+  
+.mili-sec{
+    color:  black;
 }
